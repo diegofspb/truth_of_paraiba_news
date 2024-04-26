@@ -3,11 +3,11 @@
   <header class="bg-gray p-4 ">
     <div class="container mx-auto flex items-center justify-between">
       <!-- Marca Verdade PB -->
-      <div id="logo" class="flex items-center" style="font-size: 35px;">
-        <p class="font-bold font-sans text-white text-4xl">Verdade <span style="color: red;">PB</span></p>
+      <div id="logo" class="sm:text-sm md:text-base lg:text-2xl ">
+        <h3 class="font-bold font-sans text-white">Verdade <span style="color: red;">PB</span></h3>
       </div>
       <!-- Menu Central -->
-      <div id="central-itens border" style="font-size: 20px;">
+      <div v-if="windowWidth >= 600" id="central-itens border" style="font-size: 20px;">
         <nav class=" md:block">
           <ul class="flex space-x-4">
             <li><a href="#" class="text-white hover:text-gray-300">Início</a></li>
@@ -17,11 +17,8 @@
             <li><a href="#" class="text-white hover:text-gray-300">Contato</a></li>
           </ul>
         </nav>
-      </div>
+      </div>    
 
-      <!-- Actions -->
-
-      <!-- Search -->
       <!-- Search -->
       <div class="search flex items-center justify-center">
         <form class="max-w-md mx-auto flex items-center ml-3">
@@ -48,20 +45,15 @@
           </svg>
         </div>
       </div>
-
-
-
-
-
     </div>
   </header>
 </template>
 
-<script>
-export default {
-  name: 'Header',
-  // Se você precisar de lógica adicional, como manipular eventos ou dados do componente, pode adicioná-la aqui
-}
+<script setup>
+import useWindowWidth from '@/plugins/WindowResize.js';
+
+const windowWidth = useWindowWidth();
+
 </script>
 
 <style>

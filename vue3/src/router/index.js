@@ -4,17 +4,17 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 // Definição das rotas
 
-import AuthRoutes from './AuthRoutes';
+// import AuthRoutes from './AuthRoutes';
 import MainRoutes from './MainRoutes';
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        ...AuthRoutes,
+        // ...AuthRoutes,
         ...MainRoutes,
         {
             path: '/:pathMatch(.*)*',
-            component: () => import('@/views/pages/Error404.vue')
+            component: () => import('@/views/Error404.vue')
         },
     ],
 });

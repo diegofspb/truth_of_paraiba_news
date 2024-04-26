@@ -1,39 +1,44 @@
 <template>
-  <v-app>
+  <div class="">
     <!-- Cabeçalho centralizado -->
-    <div class="flex justify-center bg-gray-200">
-
+    <div class="w-full flex justify-center bg-gray-200">
       <Header />
     </div>
 
     <!-- Layout principal -->
-    <div class="flex flex-wrapjustify-between">
+    <div class="flex flex-wrapjustify-between ">
+
       <!-- Espaço à esquerda -->
-      <div class="w-1/4 bg-gray-200 asside-home">
+      <div v-if="windowWidth >= 600"  class="w-1/4 bg-gray-200 asside-home">
         <Left />
       </div>
 
       <!-- Conteúdo centralizado -->
-      <div class="columns-3 w-full">
+      <div class="bg-orange-100">
         <router-view></router-view>
       </div>
 
       <!-- Espaço à direita -->
-      <div class=" w-1/4 bg-gray-200 asside-home">
+      <div v-if="windowWidth >= 600" class="w-1/4 bg-gray-200 asside-home">
         <Right />
       </div>
+
     </div>
-  </v-app>
+  </div>
 </template>
 
 <script setup>
+
 import Left from "@/components/layouts/Left.vue";
 import Right from "@/components/layouts/Right.vue";
 import Header from "@/components/layouts/Header.vue";
+import useWindowWidth from '@/plugins/WindowResize.js';
+
+const windowWidth = useWindowWidth();
+
 </script>
 
 <style>
-
 .asside-home {
   padding: 15px;
 }

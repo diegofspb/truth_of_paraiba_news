@@ -9,11 +9,9 @@ import router from './router';
 
 import store from '@/store';
 
-import Vuetify from '@/plugins/vuetify';
 
 
 createApp(App)
     .use(router)
-    .use(Vuetify)
     .use(store)
     .mount('#app');
