@@ -1,30 +1,31 @@
 <template>
-  <div class="">
-    <!-- Cabeçalho centralizado -->
-    <div class="w-full flex justify-center bg-gray-200">
+  <div class="sm:text-sm md:text-md lg:text-xl">
+    <div class="flex justify-center bg-gray-200">
+      <!-- Cabeçalho -->
       <Header />
     </div>
 
     <!-- Layout principal -->
-    <div class="flex flex-wrapjustify-between ">
+    <div class="flex justify-center mt-4">
 
-      <!-- Espaço à esquerda -->
-      <div v-if="windowWidth >= 600"  class="w-1/4 bg-gray-200 asside-home">
+      <!-- Espaço à esquerda para propaganda -->
+      <div v-if="windowWidth >= 600" class="w-1/5 p-4">
         <Left />
       </div>
 
-      <!-- Conteúdo centralizado -->
-      <div class="bg-orange-100">
+      <!-- Conteúdo principal (notícias) -->
+      <div class="w-full md:w-3/5 ">
         <router-view></router-view>
       </div>
 
-      <!-- Espaço à direita -->
-      <div v-if="windowWidth >= 600" class="w-1/4 bg-gray-200 asside-home">
+      <!-- Espaço à direita para propaganda -->
+      <div v-if="windowWidth >= 600" class="w-1/5 p-4">
         <Right />
       </div>
 
     </div>
   </div>
+
 </template>
 
 <script setup>

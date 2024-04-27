@@ -1,10 +1,10 @@
-import Home from '@/views/Home.vue'; // Importe o componente da página inicial
+import Noticias from '@/views/Noticias.vue'; // Importe o componente da página inicial
 
 
 const OtherRoutes = [
   {
     path: '/',
-    component: Home,
+    component: Noticias,
   },
 
 ];
