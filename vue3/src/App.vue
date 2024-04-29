@@ -1,8 +1,8 @@
 <template>
   <div class="sm:text-sm md:text-md lg:text-xl">
-    <div class="flex justify-center bg-gray-200">
+    <div class="flex mt-8 justify-center bg-gray-200">
       <!-- Cabeçalho -->
-      <Header />
+      <Header class="fixed top-0 inset-x-0 z-50"/>
     </div>
 
     <!-- Layout principal -->
@@ -14,7 +14,7 @@
       </div>
 
       <!-- Conteúdo principal (notícias) -->
-      <div class="w-full md:w-3/5 ">
+      <div class="w-full md:w-3/5 min-w-0">
         <router-view></router-view>
       </div>
 
