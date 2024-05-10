@@ -13,7 +13,7 @@
       <!-- Links de navegação no centro -->
       <nav v-if="windowWidth >= 900" class="mr-6">
         <ul class="flex space-x-4">
-          <li><a href="#" class="text-white hover:text-gray-300">Início</a></li>
+          <li><a href="/" class="text-white hover:text-gray-300">Início</a></li>
           <li><a href="#" class="text-white hover:text-gray-300">Notícias</a></li>
           <li><a href="#" class="text-white hover:text-gray-300">Esportes</a></li>
           <li><a href="#" class="text-white hover:text-gray-300">Entretenimento</a></li>
@@ -38,13 +38,15 @@
         </form>
 
         <!-- Ícone do usuário -->
-        <div
-          class="ml-1 w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 flex items-center justify-center">
-          <svg class="w-7 h-7 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd">
-            </path>
-          </svg>
-        </div>
+        <router-link to="Login">
+          <div
+            class="ml-1 w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 flex items-center justify-center">
+            <svg class="w-7 h-7 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd">
+              </path>
+            </svg>
+          </div>
+        </router-link>
 
       </div>
     </div>

@@ -15,7 +15,7 @@
 
       <!-- Conteúdo principal (notícias) -->
       <div class="w-full md:w-3/5 min-w-0">
-        <router-view></router-view>
+        <router-view class="mt-6"></router-view>
       </div>
 
       <!-- Espaço à direita para propaganda -->
